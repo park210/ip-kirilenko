@@ -1,8 +1,8 @@
 {
-  "name": "ip-kirilenko-orders",
+  "name": "kirilenko-stroy-orders",
   "version": "1.0.0",
   "private": true,
-  "description": "Сайт ИП Кириленко с отправкой заявок в Telegram",
+  "description": "Сайт Кириленко-Строй с отправкой заявок в Telegram",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -59,7 +59,7 @@ async function telegram(method, body) {
 }
 
 app.get("/api/health", (_req, res) => {
-  res.json({ ok: true, service: "ip-kirilenko-orders" });
+  res.json({ ok: true, service: "kirilenko-stroy-orders" });
 });
 
 app.post("/api/orders", async (req, res) => {
@@ -146,7 +146,7 @@ app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Website and order API listening on port ${PORT}`);
   if (!BOT_TOKEN || !ADMIN_CHAT_ID) {
     console.warn("Set BOT_TOKEN and ADMIN_CHAT_ID to enable Telegram order delivery.");
